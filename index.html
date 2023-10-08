@@ -8,9 +8,18 @@
 <body>
 
 <div class="container mx-auto">
-    <h1 class="font-bold text-xl">Structs</h1>
+    <h1 class="font-bold"><span class="text-3xl">Structs</span> <span>re-usable structures</span></h1>
+    <div class="border-b-2 mb-8"><i>Licensed Under Free BSD, by yarco.wang at gmail.com</i></div>
 
     <h2 class="font-bold text-lg">1. Introduction</h2>
+    <p>Structs has similar concepts as in <a href="https://schema.org/" class="underline">Schema.org</a>. But it is more machine-readable than human-readable.</p>
+    <p>When comparing to Schema.org, it has the following differences.</p>
+    <ul class="list-inside list-disc">
+        <li>it supplies .ini format more than description written on web pages</li>
+        <li>it keeps ECS (entity-components-system paradigm) in mind, but not as a hierarchy tree</li>
+    </ul>
+
+    <p>Let's take <a href="https://schema.org/Person" class="underline">the person</a> as an example.</p>
 
     <h2 class="font-bold text-lg">2. Contents</h2>
 
@@ -29,7 +38,12 @@
         <li>decimal</li>
 
         <li>char</li>
-        <li>varchar</li>
+        <li>varchar
+            <ul class="ml-8 list-inside">
+                <li>password</li>
+                <li>email</li>
+            </ul>
+        </li>
         <li>text</li>
 
         <li>binary</li>
@@ -38,6 +52,9 @@
         <li>time</li>
         <li>date</li>
         <li>datetime</li>
+            <ul class="ml-8 list-inside">
+                <li>timestamp</li>
+            </ul>
     </ul>
     <h3 class="font-bold">Components & References</h3>
     <h3 class="font-bold">Structs</h3>
