@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 
 EXT=.ini
-IDX=./_structs/index.json
+DIRS=(_types _components _structs)
 
-echo "Creating index file..."
-echo -n "[" > $IDX
+for dir in ${DIRS[@]}; do
+  echo "Creating index file in $dir..."
 
-for file in $(ls ./_structs/*.ini)
-do
-  echo -n "\"$(basename $file $EXT)\"," >> $IDX
+  idx="$dir/index.json"
+  content="["
+
+  for file in $(ls $dir/*.ini); do
+    content+="\""$(basename $file $EXT)"\", "
+  done
+
+  content="${content%, }]"
+  echo $content > $idx
 done
 
-echo "]" >> $IDX
 echo "Done."
