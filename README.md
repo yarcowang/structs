@@ -1,2 +1,3 @@
-# structs
-Collected commonly used data structures in real life (not the computer science one, ex.: product)
+# Structs -- re-usable structures
+
+Read more: <a href="https://www.bbish.net/structs/">structs</a>
